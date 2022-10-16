@@ -1,0 +1,60 @@
+*{
+    margin:0;
+}
+.contenido{
+    overflow-x: hidden;
+}
+
+.cabecera{
+    height: 190px;
+    background: #000000;
+    overflow: hidden;
+}
+
+.cabecera img{
+    width: 210px;
+    position: relative;
+    left: 130px;
+}
+
+.cabecera2{
+    /*border-top-style: dotted;*/
+    border-top: 1px solid #ffffff;
+    height:70px;
+    background: #000000;
+}
+
+.btn1{
+    position: absolute;
+    top: 130px;
+    right: 60px;   
+    font-size: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.botones{
+    position: relative;
+    background: none;
+    list-style-type: none;
+    top: 25px;
+    left: 40px;
+} 
+
+.inicio{
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    padding: 20px;
+    z-index: 7;
+    display: inline;
+    text-decoration: none;
+}
+.carrousel{
+    margin: 20px 400px 20px 400px;
+}
+.carrousel img{
+    border-radius: 10px;
+}
