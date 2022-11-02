@@ -1,6 +1,6 @@
 <?php 
 
-$conex = mysqli_connect("localhost","root","","intento1");
+$conex = mysqli_connect("localhost","root","","proyecto");
 
 if (isset($_POST['Registro'])) {
     if (strlen($_POST['Documento']) >= 1 && strlen($_POST['Nombres']) >= 1
@@ -12,21 +12,25 @@ if (isset($_POST['Registro'])) {
             $Telefono = trim($_POST['Telefono']);
             $Correo = trim($_POST['Correo']);
             $Contraseña = trim($_POST['Contraseña']);
-	    $consulta = "INSERT INTO usuarios(Documento, Nombres, Apellidos, Telefono, Correo, Contraseña)
+	    $consulta = "INSERT INTO registro(Cedula, Nombres, Apellidos, Telefono, Correo, Contraseña)
                     VALUES ('$Documento','$Nombres','$Apellidos','$Telefono','$Correo','$Contraseña')";
 	    $resultado = mysqli_query($conex,$consulta);
 	    if ($resultado) {
 	    	?>
-	    	<h3 class="ok">¡Te has registrado!</h3>
+	    	<script>window.alert('¡Te has registrado!');
+                window.location.href="registrarse.php";</script>
            <?php
 	    } else {
 	    	?> 
-	    	<h3 class="bad">¡Ups ha ocurrido un error!</h3>
+                <script>window.alert('¡Ups ha ocurrido un error!');
+                window.location.href="registrarse.php";</script>
            <?php
 	    }
     }   else {
 	    	?> 
-	    	<h3 class="bad">¡Por favor complete los campos!</h3>
+                <script>window.alert('¡Por favor complete los campos!');
+                window.location.href="registrarse.php";</script>
            <?php
     }
 }
+?>
