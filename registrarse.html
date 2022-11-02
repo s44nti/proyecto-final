@@ -13,13 +13,27 @@
                 padding: 1.3em;
                 margin: 0 auto;
                 background-color: rgbas(120, 119, 123, 0.3);
-                font-weight: 0.5em;
+                font-weight: bold;
+                border-radius:0.5em;
             }
 
             .registro{
                 font-size: 20px;
                 color: #31AFB4;
-
+            }
+            .ok {
+                text-align: center;
+                width: 100%;
+                padding: 12px;
+                background-color: #1e6;
+                color: #fff
+            }
+            .bad {
+                text-align: center;
+                width: 100%;
+                padding: 12px;
+                background-color: #a22;
+                color: #fff
             }
         </style>
     </head>
@@ -49,6 +63,12 @@
             <form action="" method="post" class="form_cliente">
                 <h2 class="display-4 text-primary text-center my-3">Registrarse</h2>
                 <div class="contenedor_input">
+                    
+                   <div class="form-group">
+                        <label class="registro">Numero de documento</label>    
+                        <input type="text" name="Documento" class="form-control" placeHolder="Ingrese sus apellidos">
+                    </div>
+                    <br>
 
                     <div class="form-group">
                         <label class="registro">Nombres</label>    
@@ -62,37 +82,39 @@
                     </div>
                     <br>
 
+                    <div class="form-group">
+                        <label class="registro">Telefono</label>    
+                        <input type="text" name="Telefono" class="form-control" placeHolder="Ingrese sus apellidos">
+                    </div>
+                    <br>
 
                     <div class="form-group">
                         <label class="registro">Correo electrónico</label>    
-                        <input type="text" name="Correo" class="form-control" placeHolder="Ingrese su correo electrónico">
+                        <input type="email" name="Correo" class="form-control" placeHolder="Ingrese su correo electrónico">
                     </div>
                     <br>
 
 
                     <div class="form-group">
                         <label class="registro">Contraseña</label>    
-                        <input type="password" name="Correo" class="form-control" placeHolder="Ingrese una contraseña">
+                        <input type="password" name="Contraseña" class="form-control" placeHolder="Ingrese una contraseña">
                     </div>
                     <br>
 
-                    <div class="form-group">
-                        <label class="registro">Confirmar contraseña</label>    
-                        <input type="password" name="Correo" class="form-control" placeHolder="Ingrese de nuevo su contraseña">
-                    </div>
 
 
                     <div class="botones">
-                        <button type="button" class="btn btn-outline-dark">Registrarse</button>
-                        <a class="btn btn-outline-dark" href="index.html">Regresar</a>
+                        <input type ="submit" value="Registrar" name="Registro" class="btn btn-outline-dark">
+                        <a class="btn btn-outline-dark" href="index.html" >Regresar</a>
                     </div>
                     <br>
                     <br>
 
                 </div>
-
-
             </form>
+            <?php
+                include("registrar.php");
+            ?>
         </div>
     </body>
 </html>
