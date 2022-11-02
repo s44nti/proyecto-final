@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>Registrarse</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="EstiloForm.css" type="text/css">
+        <link href="HojasEstilo/estilo.css" rel="stylesheet" type="text/css"/>
+        <link href="estilo1.css" rel="stylesheet" type="text/css"/>
+        <style>
+            .form_cliente{
+                max-width: 35em;
+                padding: 1.3em;
+                margin: 0 auto;
+                background-color: rgbas(120, 119, 123, 0.3);
+                font-weight: bold;
+                border-radius:0.5em;
+            }
+
+            .registro{
+                font-size: 20px;
+                color: #31AFB4;
+            }
+            .ok {
+                text-align: center;
+                width: 100%;
+                padding: 12px;
+                background-color: #1e6;
+                color: #fff
+            }
+            .bad {
+                text-align: center;
+                width: 100%;
+                padding: 12px;
+                background-color: #a22;
+                color: #fff
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="contenido">
+            <div class="cabecera">
+                <header>
+                    <figure>
+                        <img src="Imagenes/logo.png" alt=""/>
+                    </figure>
+                    <nav class="btn1">
+                        <a class="btn btn-outline-info" href="inicio_sesion.html">Iniciar sesión</a>
+                        <a class="btn btn-outline-info" href="registrarse.html">Registrarse</a>
+                    </nav>
+                </header>
+            </div>
+            <div class="cabecera2">
+                <div class="botones">
+                    <a class="inicio" href="index.html">Inicio</a>                
+                    <a class="inicio" href="catalogo.html">Catalogo</a>
+                    <a class="inicio" href="about_us.html">Nosotros</a>
+                    <a class="inicio" href="contactenos.html">Contactenos</a>
+                </div>
+            </div>
+
+            <form action="registrar.php" method="post" class="form_cliente">
+                <h2 class="display-4 text-primary text-center my-3">Registrarse</h2>
+                <div class="contenedor_input">
+                    
+                   <div class="form-group">
+                        <label class="registro">Numero de documento</label>    
+                        <input type="text" name="Documento" class="form-control" placeHolder="Ingrese sus apellidos">
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label class="registro">Nombres</label>    
+                        <input type="text" name="Nombres" class="form-control" placeHolder="Ingrese sus nombres">
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label class="registro">Apellidos</label>    
+                        <input type="text" name="Apellidos" class="form-control" placeHolder="Ingrese sus apellidos">
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label class="registro">Telefono</label>    
+                        <input type="text" name="Telefono" class="form-control" placeHolder="Ingrese sus apellidos">
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label class="registro">Correo electrónico</label>    
+                        <input type="text" name="Correo" class="form-control" placeHolder="Ingrese su correo electrónico">
+                    </div>
+                    <br>
+
+
+                    <div class="form-group">
+                        <label class="registro">Contraseña</label>    
+                        <input type="password" name="Contraseña" class="form-control" placeHolder="Ingrese una contraseña">
+                    </div>
+                    <br>
+
+
+
+                    <div class="botones">
+                        <input type ="submit" value="Registrar" name="Registro" class="btn btn-outline-dark">
+                        <a class="btn btn-outline-dark" href="index.html" >Regresar</a>
+                    </div>
+                    <br>
+                    <br>
+
+                </div>
+            </form>
+            <?php
+                include("registrar.php");
+            ?>
+        </div>
+    </body>
+</html>
